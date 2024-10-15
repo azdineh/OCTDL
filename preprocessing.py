@@ -10,9 +10,12 @@ from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
+dataset_path="/kaggle/input/octdl-retinal-oct-images-dataset/OCTDL Optical Coherence Tomography Dataset for Image-Based Deep Learning Methods/OCTDL/OCTDL"
+labels_path="/kaggle/input/octdl-retinal-oct-images-dataset/OCTDL Optical Coherence Tomography Dataset for Image-Based Deep Learning Methods/OCTDL_labels.csv"
+
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_folder', type=str, default='./OCTDL_dataset', help='path to dataset folder')
-parser.add_argument('--labels_path', type=str, default='./OCTDL_dataset/labels.csv', help='path to labels.csv')
+parser.add_argument('--dataset_folder', type=str, default=dataset_path, help='path to dataset folder')
+parser.add_argument('--labels_path', type=str, default=labels_path, help='path to labels.csv')
 parser.add_argument('--output_folder', type=str, default='./dataset_1', help='path to output folder')
 parser.add_argument('--crop_ratio', type=int, default=1, help='central crop ratio of image')
 parser.add_argument('--image_dim', type=int, default=512, help='final dimensions of image')
