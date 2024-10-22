@@ -1,5 +1,5 @@
 base:
-  data_path: ./dataset
+  data_path: /kaggle/working/dataset_1
   save_path: ./run
   device: cuda
   random_seed: 0
